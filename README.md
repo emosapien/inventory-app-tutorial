@@ -25,10 +25,16 @@ docker-compose down
 ### Adding node.js and knex to the Party
 
 Initialize a node project in your backed directory. Then install the following:
-[] pg - postgres interface
-[] knex - wrapper for pg/sql commands
-[] dotenv - to use the .env file
-[] eslint - to aid in code linting
+* pg - postgres interface
+* knex - wrapper for pg/sql commands
+* dotenv - to use the .env file
+* eslint - to aid in code linting
+
+Clean up your knex.js file to point to the right places for your db, migration, and seed locations. Once you create your initial migration file, this is where you will begin to design the tables for your db. You can use the code to set the order tables are created. As well as the order to drop them (important when some are dependent on others.)
+
+A `tableNames.js` file is created to hold a nice clean list of our tables. I should do my own design file and try this more personalized...
+
+Finally, add scripts to your `package.json` file to make easier way to run migration and rollback (up/down) commands.
 
 ```sh
 npm init -y
