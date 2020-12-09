@@ -8,14 +8,16 @@
 
 
 # Notes from Videos (ToBeCleaned Up)
+```sh
+mkdir inventory-app               //Project Folder
+cd inventory-app                  
+mkdir backend                     //backend of app
+cd backend
+touch docker-compose.yaml         //for postgres+adminer
+touch .env                        //hold env variables for dockerfile, etc
+mkdir /docker-data/db-data        //spot for db data to be hosted locally
+//Now you should be able to test your docker compose
+docker-compose up
+docker-compose down
 
-> mkdir inventory-app               //Project Folder
-> cd inventory-app                  
-> mkdir backend                     //backend of app
-> cd backend
-> touch docker-compose.yaml         //for postgres+adminer
-> touch .env                        //hold env variables for dockerfile, etc
-> mkdir /docker-data/db-data        //spot for db data to be hosted locally
-Now you should be able to test your docker compose
-> docker-compose up
-> docker-compose down
+```
